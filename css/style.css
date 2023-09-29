@@ -1,0 +1,207 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.popup-start {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    transition: 1s;
+}
+
+.popup-start__logo {
+    width: 300px;
+}
+
+#cardGame {
+    position: relative;
+    padding: 30px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.blackjack-logo {
+    position: absolute;
+    width: 230px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+#blackJackMenu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu__item {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    padding: 7px;
+    font-size: 20px;
+}
+
+.btn-rules {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-rules img {
+    width: 30px;
+}
+
+.blackjack-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 50px)
+}
+
+.card-deck {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 122px;
+    z-index: 3;
+}
+
+.computer, .player-about {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+.computer__info, .player__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.computer__info__score, .player__info__score {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.computer__img img, .player__img img {
+    width: 70px;
+    margin-right: 7px;
+}
+
+.player-btn-block {
+    display: none;
+    justify-content: center;
+    gap: 7px;
+    margin-bottom: 7px;
+}
+
+.player-btn__another, .player-btn__pass, .enter-bet-btn, .popup-start__btn, .popup-result__btn {
+    background-color: #29323c00;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 300ms;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.player-btn__another:hover, .player-btn__pass:hover, .enter-bet-btn:hover, .popup-start__btn:hover, .popup-result__btn:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.computer-cards-container, .player-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.computer-cards-container img, .player-cards-container img {
+    width: 117px;
+}
+
+.enter-bet-block {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-bottom: 7px;
+}
+
+#enterBet {
+    width: 170px;
+    background-color: #29323c00;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+}
+
+.popup-rules, .popup-result {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.46);
+    transform: translateY(-100%);
+    transition: 1s;
+}
+
+.popup-rules__list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    background-color: azure;
+    width: 50%;
+    border-radius: 15px;
+    padding: 20px;
+    padding-left: 40px;
+}
+
+.popup-result {
+    transform: translateY(0);
+    justify-content: space-around;
+    width: 100%;
+    color: #fff;
+    gap: 30px;
+    font-size: 28px;
+    transform: translateY(-100%);
+    background-color: rgba(0, 0, 0, 0.864);
+}
+
+.popup-result__txt {
+    font-weight: bold;
+}

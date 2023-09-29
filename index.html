@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&#9824; Blackjack &#9824;</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="popup-start">
+        <img class="popup-start__logo" src="img/blackjack-logo.png" alt="blackjack-logo">
+        <button class="popup-start__btn">Start game</button>
+    </div>
+    <div class="popup-rules">
+        <ol class="popup-rules__list">
+            <b>Правила:</b> 
+            <li>Выберите сумму для активации игры.</li>
+            <li>Сделайте ставку. Размер начальной и максимальной ставки определяется до начала игры.</li>
+            <li>В игре используются карты от 2 и до туза, они все перемешены и находятся в колоде.</li>
+            <li>Значения очков каждой карты: от двойки до десятки — соответственно от 2 до 10, J - 2, Q - 3, K - 4, A - 11.</li>
+            <li>В начале игры раздается по одной карте. Нажимая кнопку "Another card" берите по одной карте до тех пор, пока не приблизитесь к 21 очку. Считаете, что пора остановиться? Тогда кликайте по кнопке "Pass".</li>
+            <li>Вы победили если ваше количество очков в сумме больше чем у другого игрока и не превышает 21.</li>
+            <li>Вы проиграли если ваше количество очков в сумме меньше чем у другого игрока и не превышает 21 или если ваше количество очков больше 21 – это автоматически проигрыш.</li>
+            <li>Ничья, если вы и другой игрок набрали по 21 очку за игру.</li>
+        </ol>
+    </div>
+    <div class="popup-result">
+        <p class="popup-result__txt">Ты проиграл!</p>
+        <button class="popup-result__btn">Play again</button>
+    </div>
+    <section id="cardGame">
+        <img class="blackjack-logo" src="img/blackjack-logo.png" alt="blackjack-logo">
+        <img class="card-deck" src="img/cards/back-card.svg" alt="back-card">
+        <header id="blackJackMenu">
+            <ul class="menu">
+                <li class="menu__item menu-money">money: 200$</li>
+                <li class="menu__item menu-bet">bet: 0$</li>
+            </ul>
+            <button class="btn-rules"><img src="icons/question-icon.svg" alt="rules"></button>
+        </header>
+        <div class="blackjack-container">
+            <div class="computer">
+                <div class="computer__img"><img src="img/computer-img.svg" alt="computer"></div>
+                <div class="computer__info">
+                    <p class="computer__info__name">Computer</p>
+                    <p class="computer__info__money">200$</p>
+                    <p class="computer__info__score">0</p>
+                </div>
+            </div>
+            <div class="computer-cards-container"></div>
+            <div class="player-cards-container"></div>
+            <div class="player">
+                <form class="enter-bet-block" action="">
+                    <input id="enterBet" type="text" min="20" max="200" value="20">
+                    <button class="enter-bet-btn">Enter Bet</button>
+                </form>
+                <div class="player-btn-block">
+                    <button class="player-btn__another">Another card</button>
+                    <button class="player-btn__pass">Pass</button>
+                </div>
+                <div class="player-about">
+                    <div class="player__img"><img src="img/player-img.svg" alt="player"></div>
+                    <div class="player__info">
+                        <p class="player__info__name">Player</p>
+                        <p class="player__info__money">200$</p>
+                        <p class="player__info__score">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/game.js"></script>
+</body>
+</html>
